@@ -1,6 +1,6 @@
 import React from 'react';
 import Temperatureinput from './TemperatureInput'
-import { convert,toCelsius,toFahrenheit } from '../lib/converter';
+import { convert,toCelsius,toFahrenheit } from './../../lib/converter';
 import BoilinhVerdict  from './BoilingVerdict';
 
 export default class Calculator extends React.Component{

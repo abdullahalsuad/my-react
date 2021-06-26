@@ -1,6 +1,6 @@
 // import ClockLIst from '../src/Components/ClockLIst';
 // import Form from "../src/Components/From"
-import Calculator from "./Components/Calculator";
+import Calculator from "./Components/TempCalculator/Calculator";
 
 
 function App() {
