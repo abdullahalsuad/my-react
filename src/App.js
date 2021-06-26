@@ -2,9 +2,11 @@
 // import Form from "../src/Components/From"
 //import Calculator from "./Components/TempCalculator/Calculator";
 //import Text from "./Components/inheritance/Text";
-import Emoji from './Components/Composition/Emoji'
-import Text from './Components/Composition/Text'
-import Bracket from './Components/Composition/Baracket';
+// import Emoji from './Components/Composition/Emoji'
+// import Text from './Components/Composition/Text'
+// import Bracket from './Components/Composition/Baracket';
+import ClickCounter from "./Components/HOComponent/ClickCounter";
+import HoverCounter from "./Components/HOComponent/HoverCounter";
 
 
 function App() {
@@ -13,13 +15,15 @@ function App() {
         <div>
              {/* <ClockLIst quantity ={quantity} /> 
             <Form /> 
-            <Calculator/> */}
+            <Calculator/> 
             <Emoji>
                 {({addEmoji}) => (
                 <Bracket>
                   {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
                 </Bracket>)}
-            </Emoji>
+            </Emoji> */}
+            <ClickCounter/>
+            <HoverCounter />
             
         </div>
     );
