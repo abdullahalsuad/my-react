@@ -1,12 +1,13 @@
 // import ClockLIst from '../src/Components/ClockLIst';
 // import Form from "../src/Components/From"
-//import Calculator from "./Components/TempCalculator/Calculator";
-//import Text from "./Components/inheritance/Text";
+// import Calculator from "./Components/TempCalculator/Calculator";
+// import Text from "./Components/inheritance/Text";
 // import Emoji from './Components/Composition/Emoji'
-// import Text from './Components/Composition/Text'
 // import Bracket from './Components/Composition/Baracket';
 import ClickCounter from "./Components/HOComponent/ClickCounter";
+import Counter from "./Components/HOComponent/Counter";
 import HoverCounter from "./Components/HOComponent/HoverCounter";
+
 
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
                   {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
                 </Bracket>)}
             </Emoji> */}
-            <ClickCounter/>
-            <HoverCounter />
+            
+            <Counter render={(counter,incrementCount) =>  <ClickCounter counter={counter} incrementCount={incrementCount}  />} />
+            <Counter render={(counter,incrementCount) =>  <HoverCounter counter={counter} incrementCount={incrementCount}  />} />
             
         </div>
     );
