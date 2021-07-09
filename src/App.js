@@ -1,3 +1,4 @@
+import React from 'react'
 // import ClockLIst from '../src/Components/ClockLIst';
 // import Form from "../src/Components/From"
 // import Calculator from "./Components/TempCalculator/Calculator";
@@ -6,12 +7,16 @@
 // import Bracket from './Components/Composition/Baracket';
 import ClickCounter from "./Components/HOComponent/ClickCounter";
 import Counter from "./Components/HOComponent/Counter";
-import HoverCounter from "./Components/HOComponent/HoverCounter";
+//import HoverCounter from "./Components/HOComponent/HoverCounter";
+import Section from "./Components/Section";
 
-
-
-function App() {
-    // const quantity =[1,2,3,4];
+export default class App extends React.Component {
+    state = {
+        theme: 'dark'
+    };
+    render() {
+        // const quantity =[1,2,3,4];
+        const {theme} = this.state;
     return (
         <div>
              {/* <ClockLIst quantity ={quantity} /> 
@@ -24,11 +29,14 @@ function App() {
                 </Bracket>)}
             </Emoji> */}
             
-            <Counter render={(counter,incrementCount) =>  <ClickCounter counter={counter} incrementCount={incrementCount}  />} />
-            <Counter render={(counter,incrementCount) =>  <HoverCounter counter={counter} incrementCount={incrementCount}  />} />
+            <Counter>
+            {(counter,incrementCount) =>  <ClickCounter counter={counter} incrementCount={incrementCount}  />}
+            </Counter>
+
+            <Section theme={theme}/>
             
         </div>
-    );
+    )
+    }
 }
 
-export default App;

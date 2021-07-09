@@ -8,9 +8,9 @@ export default class Counter extends React.Component{
         this.setState((prevState) => ({counter: prevState.counter + 1}))
     }
     render() {
-        const {render} = this.props
+        const {children} = this.props
         const {counter} = this.state;
-        return render(counter,this.incrementCount);
+        return children(counter,this.incrementCount);
     }
 }
 
