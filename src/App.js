@@ -9,14 +9,27 @@ import ClickCounter from "./Components/HOComponent/ClickCounter";
 import Counter from "./Components/HOComponent/Counter";
 //import HoverCounter from "./Components/HOComponent/HoverCounter";
 import Section from "./Components/Section";
+import ThemeContext from './contexts/ThemeContext';
 
 export default class App extends React.Component {
     state = {
-        theme: 'dark'
+        theme: 'dark',
+        switchTheme: () =>{
+            this.setState(({theme}) =>{
+                if(theme === 'dark'){
+                    return{
+                        theme:'light',
+                    }
+                }
+                return{
+                    theme:'dark',
+                }
+            })
+        }
     };
+
     render() {
         // const quantity =[1,2,3,4];
-        const {theme} = this.state;
     return (
         <div>
              {/* <ClockLIst quantity ={quantity} /> 
@@ -33,7 +46,9 @@ export default class App extends React.Component {
             {(counter,incrementCount) =>  <ClickCounter counter={counter} incrementCount={incrementCount}  />}
             </Counter>
 
-            <Section theme={theme}/>
+           <ThemeContext.Provider value={this.state} >
+               <Section />
+            </ThemeContext.Provider> 
             
         </div>
     )
