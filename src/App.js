@@ -30,6 +30,7 @@ export default class App extends React.Component {
 
     render() {
         // const quantity =[1,2,3,4];
+       
     return (
         <div>
              {/* <ClockLIst quantity ={quantity} /> 
@@ -43,7 +44,8 @@ export default class App extends React.Component {
             </Emoji> */}
             
             <Counter>
-            {(counter,incrementCount) =>  <ClickCounter counter={counter} incrementCount={incrementCount}  />}
+            {(counter,incrementCount) =>  <ClickCounter count={counter} incrementCount={incrementCount}  />}
+            {/* {(counter,incrementCount) =>  <HoverCounter count={counter} incrementCount={incrementCount}  />} */}
             </Counter>
 
            <ThemeContext.Provider value={this.state} >

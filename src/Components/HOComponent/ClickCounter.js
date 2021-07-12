@@ -2,10 +2,10 @@ import React from 'react'
 
 export default class ClickCounter extends React.Component{
     render(){
-        const {counter,incrementCount} = this.props;
+        const {count,incrementCount} = this.props;
         return(
             <div>
-                <button onClick={incrementCount}>click me {counter}</button>
+                <button onClick={incrementCount}>click me {count}</button>
             </div>
         )
     }

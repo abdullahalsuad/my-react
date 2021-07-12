@@ -2,15 +2,15 @@ import React from 'react'
 
 export default class Counter extends React.Component{
     state ={
-        counter: 0,
+        count: 0,
     }
     incrementCount = () => {
-        this.setState((prevState) => ({counter: prevState.counter + 1}))
+        this.setState((prevState) => ({count: prevState.count + 1}))
     }
     render() {
         const {children} = this.props
-        const {counter} = this.state;
-        return children(counter,this.incrementCount);
+        const {count} = this.state;
+        return children(count,this.incrementCount);
     }
 }
 

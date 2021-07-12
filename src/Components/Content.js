@@ -14,7 +14,7 @@ export default function Content() {
             <Counter>
             {(counter, incrementCount) => (
                   <HoverCounter
-                  counter={counter}
+                  count={counter}
                   incrementCount={incrementCount}
                   theme={theme}
                   switchTheme={switchTheme}

@@ -10,7 +10,7 @@ const withCounter =(OrginalComponent) =>{
         }
       render() {
           const {count} = this.state;
-          return <OrginalComponent count={count} incrementCount ={this.incrementCount}/>
+          return <OrginalComponent count={count} incrementCount={this.incrementCount}/>
       }  
     }
     return NewComponent
