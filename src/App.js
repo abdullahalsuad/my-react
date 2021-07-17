@@ -7,7 +7,7 @@ import React from 'react'
 // import Bracket from './Components/Composition/Baracket';
 import ClickCounter from "./Components/HOComponent/ClickCounter";
 import Counter from "./Components/HOComponent/Counter";
-//import HoverCounter from "./Components/HOComponent/HoverCounter";
+// import HoverCounter from "./Components/HOComponent/HoverCounter";
 import Section from "./Components/Section";
 import ThemeContext from './contexts/ThemeContext';
 
@@ -47,7 +47,7 @@ export default class App extends React.Component {
             {(counter,incrementCount) =>  <ClickCounter count={counter} incrementCount={incrementCount}  />}
             {/* {(counter,incrementCount) =>  <HoverCounter count={counter} incrementCount={incrementCount}  />} */}
             </Counter>
-
+                
            <ThemeContext.Provider value={this.state} >
                <Section />
             </ThemeContext.Provider> 
